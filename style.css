@@ -166,3 +166,170 @@ h4 {
 	font-size: 14px;
 }
 }
+
+/* ========================================
+   頒布物ギャラリー
+======================================== */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 30px;
+    padding: 30px 0;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   カード本体
+======================================== */
+
+.gallery-container .card {
+    position: relative;
+
+    width: 300px;
+    max-width: 300px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* ========================================
+   カード画像
+======================================== */
+
+.card-image {
+    width: 100%;
+}
+
+.card-image img {
+    display: block;
+
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   カード文章
+======================================== */
+
+.card-text {
+    padding: 20px;
+}
+
+.card-text h3 {
+    margin: 0 0 10px 0;
+
+    font-size: 20px;
+    line-height: 1.4;
+
+    color: #333;
+}
+
+.card-text p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    color: #555;
+}
+
+
+/* ========================================
+   バッジ
+======================================== */
+
+.badge {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    padding: 5px 12px;
+
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        45deg,
+        #4facfe,
+        #00f2fe
+    );
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   マウスを乗せたとき
+======================================== */
+
+.gallery-container .card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px rgba(33, 69, 85, 0.35);
+
+    filter: brightness(1.03);
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+    .gallery-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 20px 0;
+    }
+
+    .gallery-container .card {
+        width: calc(100% - 20px);
+        max-width: 350px;
+    }
+
+    .card-image img {
+        height: auto;
+        max-height: 250px;
+
+        object-fit: cover;
+    }
+}
+
+#content-wrapper {
+    margin: 0 auto;
+    width: 694px;
+}

@@ -21,13 +21,13 @@ function productCard()
                 imageHTML = `<div class="card-image"><img src="${item.image}" loading="lazy"></div>`;
             let badgeHTML = ""
             if (item.badge && item.badge !== "")
-                badgeHTML = `<div class="badge ${item.category}">${item.badge}</div>`;
+                badgeHTML = `<div class="badge">${item.badge}</div>`;
             const cardHTML = `
                 <div class="card gallery-item">
                     ${imageHTML}
                     <div class="card-text">
                         <h3>${item.title}</h3>
-                        <p class="${item.category === 'novel' ? 'novel-preview' : ''}">${item.text}</p>
+                        <p>${item.text}</p>
                     </div>
                     ${badgeHTML}
                 </div>
